@@ -1,9 +1,6 @@
-// const { getUserById } = require('./js-foundation/04-arrows');
-const { buildMakePerson } = require('./js-foundation/05-factory');
-const { getIdWithUUID: getUUID, getAge } = require('./plugins');
+const getPokemonById = require('./js-foundation/06-promises');
 
-const makePerson = buildMakePerson({ getUUID, getAge });
-const obj = {"name": "John", "birthdate": '1997-09-07', "city": "New York"};
-const john = makePerson( obj );
-
-console.log({john});
+getPokemonById(1)
+    .then( (pokemon) => console.log({pokemon}) )
+    .catch( (error) => console.log(error) )
+    .finally( () => console.log('Finally!') );

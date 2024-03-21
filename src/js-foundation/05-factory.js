@@ -8,7 +8,7 @@ const buildMakePerson = ({ getUUID, getAge }) => {
             birthdate,
             age: getAge(birthdate)
         }
-    }
+    }   
     
 }
 
