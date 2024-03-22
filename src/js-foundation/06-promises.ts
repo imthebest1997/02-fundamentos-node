@@ -1,6 +1,6 @@
-const { http } = require('../plugins'); 
+import { http } from "../plugins";
 
-const getPokemonById = async( id ) => {
+export const getPokemonById = async( id: number ) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
 
     const pokemon = await http.get(url);
@@ -11,6 +11,3 @@ const getPokemonById = async( id ) => {
     //     .then((pokemon) => pokemon.name)
     //     .catch((error) => console.log(error));
 }
-
-
-module.exports = getPokemonById;

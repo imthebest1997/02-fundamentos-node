@@ -1,4 +1,4 @@
-const { buildLogger } = require('./plugins/');
+import { buildLogger } from './plugins/logger.plugin';
 
 // const getPokemonById = require('./js-foundation/06-promises');
 
@@ -9,5 +9,5 @@ const { buildLogger } = require('./plugins/');
 
 
 const logger = buildLogger('app.js');
-logger.info('Hello, world!');
-logger.error('This is an error!');
+logger.info('Hello, world with ts!');
+logger.error('This is an error of ts!');
